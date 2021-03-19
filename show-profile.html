@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fa-IR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/mdb.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>داشبرد کاربران کالابرگ</title>
+</head>
+
+<body id="userdash">
+    <header>
+
+    </header>
+    <div class="container-fluid ltr">
+        <div class="row">
+            <main class="col-9 col-lg-9 border border-white pt-5">
+                <h1>
+                    نمایش پروفایل
+                </h1>
+                <p class="text-center">
+                        <img src="assets/images/285-2855629_profile-clipart-hd-png-download.jpg">
+
+                </p>
+              
+                    <div class="md-form">
+                        <input type="text" id="username" class="form-control" disabled>
+                        <label for="username" class="disabled">username</label>
+                    </div>
+                    <div class="md-form rtl">
+                        <input type="text" id="name" class="form-control" disabled>
+                        <label for="name" class="disabled">نام</label>
+                    </div>
+                    <div class="md-form">
+                            <input type="email" id="email" class="form-control">
+                            <label for="email">example@gmail.com</label>
+                          </div>
+                                   <div class="md-form rtl">
+                                <input type="text" id="mobile" class="form-control">
+                                <label for="mobile">شماره موبایل</label>
+                              </div>
+               <form action="" methode="POST">
+                              <div class="m-auto text-center">
+                                    <input type="submit" value="ویرایش  اطلاعات" class="btn btn-warning">
+
+                              </div>
+                </form>
+            </main>
+            <aside class="colapse rtl">
+                <div class="iconslider">
+                    <ul class="nav nav-tabs" id="" role="">
+                        <li class="nav-item active" id="firstlist">
+                            <a class="nav-link active" id="home-tab" href="#home" 
+                                aria-controls="home" aria-selected="true"><img src="assets/images/img_trans.gif" alt=""
+                                    id="dashboard"></a>
+                        </li>
+                        <li class="nav-item" id="seclist">
+                            <a class="nav-link" id="profile-tab" href="#profile" 
+                                aria-controls="profile" aria-selected="false"> <img src="assets/images/img_trans.gif"
+                                    alt="" id="users"></a>
+                        </li>
+                        <li class="nav-item" id="thirdlist">
+                            <a class="nav-link" id="contact-tab" href="#contact" 
+                                aria-controls="contact" aria-selected="false"><img src="assets/images/img_trans.gif"
+                                    alt="" id="product"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane extrimeside active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <ul class="p-custrasid">
+                            <li>
+                                داشبرد
+
+                                <ul class="submenu noheight">
+                                    <li><a href="index.html">نمایش داشبرد</a></li>
+                                </ul>
+
+                            </li>
+                            <div class="remactive text-white">
+                                <i class="fas fa-caret-right"></i>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="tab-pane extrimeside" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <ul class="p-custrasid">
+                            <li>
+                                کاربر
+
+                                <ul class="submenu noheight">
+                                    <li><a href="show-profile.html">نمایش
+                                            پروفایل</a></li>
+                                    <li><a href="create-profile.html">ایجاد
+                                            پروفایل</a></li>
+                                    <li><a href="usershow.html">نمایش کاربر</a></li>
+                                    <li><a href="">نمایش آدرس ها</a></li>
+                                    <li><a href="">ایجاد آدرس</a></li>
+                                </ul>
+                            </li>
+                            <div class="remactive text-white">
+                                <i class="fas fa-caret-right"></i>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="tab-pane extrimeside" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <ul class="p-custrasid">
+                            <li>
+                                مدیریت محصولات
+                                <ul class="submenu noheight">
+                                    <li><a href="">نمایش محصولات</a></li>
+                                    <li><a href="">ایجاد محصول جدید</a></li>
+
+                                </ul>
+                            </li>
+                            <div class="remactive text-white">
+                                <i class="fas fa-caret-right"></i>
+                            </div>
+                        </ul>
+                        <ul class="p-custrasid">
+                            <li>
+                                مدیریت صنف
+                                <ul class="submenu noheight">
+                                    <li><a href="">نمایش اصناف</a></li>
+                                    <li><a href="">ایجاد صنف</a></li>
+
+                                </ul>
+                            </li>
+                            <div class="remactive text-white">
+                                <i class="fas fa-caret-right"></i>
+                            </div>
+                        </ul>
+                        <ul class="p-custrasid">
+                            <li>
+                                منو ساز رستوران
+                                <ul class="submenu noheight">
+                                    <li><a href="">نمایش منو ها</a></li>
+                                    <li><a href="">ایجاد منو</a></li>
+                                    <li><a href="">نمایش (غذا، دسر، نوشیدنی) منو</a></li>
+                                    <li><a href="">ایجاد (غذا، دسر، نوشیدنی)</a></li>
+                                </ul>
+                            </li>
+                            <div class="remactive text-white">
+                                <i class="fas fa-caret-right"></i>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/mdb.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

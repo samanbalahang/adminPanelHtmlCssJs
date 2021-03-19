@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fa-IR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/mdb.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <title>داشبرد کاربران کالابرگ</title>
+</head>
+
+<body id="userdash">
+    <header>
+
+    </header>
+    <div class="container-fluid ltr">
+
+        <div class="row">
+            <main class="col-9 col-lg-9 border border-white py-5 rtl">
+                <h1 class="pb-5">
+                    ایجاد غذا، نوشیدنی ، دسر و ...
+                </h1>
+                <form action="" methode="POST" enctype="multipart/form-data" class="rtl">
+                    <div class="md-form rtl">
+                        <select class="browser-default custom-select select2">
+                            <option selected>منویی که میخواهید به آن غذا اضافه کنید انتخاب کنید</option>
+                            <option value="1"> منو اول </option>
+                            <option value="2"> منو دوم</option>
+                            <option value="3">منو سوم</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <!-- Grid column -->
+                        <div class="col">
+                            <!-- Material input -->
+                            <div class="md-form mt-0 rtl">
+                                <input type="text" class="form-control" id="foodtitle_1">
+                                <label for="foodtitle_1">عنوان غذا</label>
+                            </div>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col">
+                            <!-- Material input -->
+                            <div class="md-form mt-0 rtl">
+                                <input type="text" class="form-control" id="foodprice_1">
+                                <label for="foodprice_1">قیمت غذا</label>
+                            </div>
+                        </div>
+                        <!-- Grid column -->
+                        <div class="col">
+                            <!-- Material input -->
+                            <div class="md-form mt-0 rtl">
+                                <input type="text" class="form-control" id="fooddesk_1">
+                                <label for="fooddesk_1">توضیحات غذا</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Grid column -->
+                        <div class="col">
+                            <!-- Material input -->
+                            <div class="md-form mt-0 rtl">
+                                <input type="text" class="form-control" id="foodtitle_2">
+                                <label for="foodtitle_2">عنوان غذا</label>
+                            </div>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col">
+                            <!-- Material input -->
+                            <div class="md-form mt-0 rtl">
+                                <input type="text" class="form-control" id="foodprice_2">
+                                <label for="foodprice_2">قیمت غذا</label>
+                            </div>
+                        </div>
+                        <!-- Grid column -->
+                        <div class="col">
+                            <!-- Material input -->
+                            <div class="md-form mt-0 rtl">
+                                <input type="text" class="form-control" id="fooddesk_2">
+                                <label for="fooddesk_2">توضیحات غذا</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Grid column -->
+                        <div class="col">
+                            <!-- Material input -->
+                            <div class="md-form mt-0 rtl">
+                                <input type="text" class="form-control" id="foodtitle_3">
+                                <label for="foodtitle_3">عنوان غذا</label>
+                            </div>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col">
+                            <!-- Material input -->
+                            <div class="md-form mt-0 rtl">
+                                <input type="text" class="form-control" id="foodprice_3">
+                                <label for="foodprice_3">قیمت غذا</label>
+                            </div>
+                        </div>
+                        <!-- Grid column -->
+                        <div class="col">
+                            <!-- Material input -->
+                            <div class="md-form mt-0 rtl">
+                                <input type="text" class="form-control" id="fooddesk_3">
+                                <label for="fooddesk_3">توضیحات غذا</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Grid column -->
+                        <div class="col">
+                            <!-- Material input -->
+                            <div class="md-form mt-0 rtl">
+                                <input type="text" class="form-control" id="foodtitle_4">
+                                <label for="foodtitle_4">عنوان غذا</label>
+                            </div>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col">
+                            <!-- Material input -->
+                            <div class="md-form mt-0 rtl">
+                                <input type="text" class="form-control" id="foodprice_4">
+                                <label for="foodprice_4">قیمت غذا</label>
+                            </div>
+                        </div>
+                        <!-- Grid column -->
+                        <div class="col">
+                            <!-- Material input -->
+                            <div class="md-form mt-0 rtl">
+                                <input type="text" class="form-control" id="fooddesk_4">
+                                <label for="fooddesk_4">توضیحات غذا</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="anothersfood">
+                        
+                    </div>
+                    <div class="row" id="divplusfoood">
+                        <!-- Grid column -->
+                        <div class="col">
+                            <!-- Material input -->
+                            <div class="md-form mt-0  ltr text-right">
+                                <div class="circle-aroud-plus" id="addfood">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+          
+                    </div>
+                 
+                    <div class="m-auto text-center">
+                        <input type="submit" value="ثبت اطلاعات" class="btn btn-warning">
+                    </div>
+                </form>
+
+            </main>
+            <!--start aside -->
+            <aside class="colapse rtl">
+                <div class="iconslider">
+                    <ul class="nav nav-tabs" id="" role="">
+                        <li class="nav-item active" id="firstlist">
+                            <a class="nav-link active" id="home-tab" href="#home" 
+                                aria-controls="home" aria-selected="true"><img src="assets/images/img_trans.gif" alt=""
+                                    id="dashboard"></a>
+                        </li>
+                        <li class="nav-item" id="seclist">
+                            <a class="nav-link" id="profile-tab" href="#profile" 
+                                aria-controls="profile" aria-selected="false"> <img src="assets/images/img_trans.gif"
+                                    alt="" id="users"></a>
+                        </li>
+                        <li class="nav-item" id="thirdlist">
+                            <a class="nav-link" id="contact-tab" href="#contact" 
+                                aria-controls="contact" aria-selected="false"><img src="assets/images/img_trans.gif"
+                                    alt="" id="product"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane extrimeside active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <ul class="p-custrasid">
+                            <li>
+                                داشبرد
+
+                                <ul class="submenu noheight">
+                                    <li><a href="index.html">نمایش داشبرد</a></li>
+                                </ul>
+
+                            </li>
+                            
+                        </ul>
+                        <div class="remactive text-white">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                    </div>
+                    <div class="tab-pane extrimeside" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <ul class="p-custrasid">
+                            <li>
+                                کاربر
+
+                                <ul class="submenu noheight">
+                                    <li><a href="show-profile.html">نمایش
+                                            پروفایل</a></li>
+                                    <li><a href="create-profile.html">ایجاد
+                                            پروفایل</a></li>
+                                    <li><a href="create-user.html">ایحاد کاربر</a></li>        
+                                    <li><a href="userlist.html">لیست کاربران</a></li>
+                                    <li><a href="create-address.html">ایجاد آدرس</a></li>
+                                    <li><a href="show-address.html">نمایش آدرس ها</a></li>                                 
+                                </ul>
+                            </li>
+                   
+                        </ul>
+                        <div class="remactive text-white">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                    </div>
+                    <div class="tab-pane extrimeside" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <ul class="p-custrasid">
+                            <li>
+                                مدیریت کالابرگها
+                                <ul class="submenu noheight">
+                                    <li><a href="list-adminPanel.html"> مشاهده همه</a><span class="upnumber">3</span></li>
+                                    <li><a href="create-adminPanel.html">ایجاد کالابرگ </a></li>
+                                    <li><a href="list-exisadminPanel.html"> کالابرگهای موجود</a><span class="upnumber">3</span></li>                              
+                                    <li><a href="list-selladminPanel.html"> فروخته شده </a><span class="upnumber">3</span></li>
+                                </ul>
+                            </li>
+                    
+                        </ul>
+                        <ul class="p-custrasid">
+                            <li>
+                                منو ساز رستوران
+                                <ul class="submenu noheight">
+                                    <li><a href="show-menu.html">نمایش منو ها</a></li>
+                                    <li><a href="create-menu.html">ایجاد منو</a></li>
+                                    <li><a href="">نمایش (غذا، دسر، نوشیدنی) منو</a></li>
+                                    <li><a href="create-food.html">ایجاد (غذا، دسر، نوشیدنی)</a></li>
+                                </ul>
+                            </li>
+                        
+                        </ul>
+                        <ul class="p-custrasid">
+                            <li>
+                                مدیریت صنف
+                                <ul class="submenu noheight">
+                                    <li><a href="">نمایش اصناف</a></li>
+                                    <li><a href="">ایجاد صنف</a></li>
+
+                                </ul>
+                            </li>
+                     
+                        </ul>
+                        <div class="remactive text-white">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+             <!--end aside -->
+        </div>
+    </div>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/mdb.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/script.js"></script>  
+</body>
+
+</html>

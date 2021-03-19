@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fa-IR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/mdb.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <title>داشبرد کاربران کالابرگ</title>
+</head>
+
+<body id="userdash">
+    <header>
+
+    </header>
+    <div class="container-fluid ltr">
+
+        <div class="row">
+            <main class="col-9 col-lg-9 border border-white">
+                <h1 class="p-3">
+                    نمایش آدرس
+                </h1>
+                <form action="" methode="POST" enctype="multipart/form-data">
+                    <div class="md-form rtl">
+                        <select class="browser-default custom-select select2">
+                            <option selected>کاربری که میخواهید آدرسی برای آن ویرایش کنید را انتخاب کنید</option>
+                            <option value="1">نام کاربر اول </option>
+                            <option value="2">نام کاربر دوم</option>
+                            <option value="3">نام کاربر سوم</option>
+                        </select>
+                    </div>
+                    <div class="container rtl">
+                        <table id="showMenu" class="display datatable w-100">
+                            <thead>
+                                <tr>
+                                    <th>شماره پلاک:</th>
+                                    <th>اسم کوچه</th>
+                                    <th>اسم خیابان</th>
+                                    <th>اسم شهر</th>
+                                    <th>ویرایش</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>20</td>
+                                    <td>دارابی</td>
+                                    <td>چمران</td>
+                                    <td>تهران</td>
+                                    <td>
+                                        <div class="d-flex justify-content-center w-100">
+                                            <a href="edit-address.html" class="btn btn-warning p-2">ویرایش</a>
+                                            <form action="" methode="POST">
+                                                <input type="submit" value="حذف" class="btn btn-danger p-2">
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>شماره پلاک:</th>
+                                    <th>اسم کوچه</th>
+                                    <th>اسم خیابان</th>
+                                    <th>اسم شهر</th>
+                                    <th>ویرایش</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+
+                            </tbody>
+                            <tfoot>
+
+                            </tfoot>
+                        </table>
+                    </div>
+                </form>
+            </main>
+            <aside class="colapse rtl">
+                <div class="iconslider">
+                    <ul class="nav nav-tabs" id="" role="">
+                        <li class="nav-item active" id="firstlist">
+                            <a class="nav-link active" id="home-tab" href="#home" aria-controls="home"
+                                aria-selected="true"><img src="assets/images/img_trans.gif" alt="" id="dashboard"></a>
+                        </li>
+                        <li class="nav-item" id="seclist">
+                            <a class="nav-link" id="profile-tab" href="#profile" aria-controls="profile"
+                                aria-selected="false"> <img src="assets/images/img_trans.gif" alt="" id="users"></a>
+                        </li>
+                        <li class="nav-item" id="thirdlist">
+                            <a class="nav-link" id="contact-tab" href="#contact" aria-controls="contact"
+                                aria-selected="false"><img src="assets/images/img_trans.gif" alt="" id="product"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane extrimeside active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <ul class="p-custrasid">
+                            <li>
+                                داشبرد
+
+                                <ul class="submenu noheight">
+                                    <li><a href="index.html">نمایش داشبرد</a></li>
+                                </ul>
+
+                            </li>
+                            <div class="remactive text-white">
+                                <i class="fas fa-caret-right"></i>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="tab-pane extrimeside" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <ul class="p-custrasid">
+                            <li>
+                                کاربر
+
+                                <ul class="submenu noheight">
+                                    <li><a href="show-profile.html">نمایش
+                                            پروفایل</a></li>
+                                    <li><a href="create-profile.html">ایجاد
+                                            پروفایل</a></li>
+                                    <li><a href="usershow.html">نمایش کاربر</a></li>
+                                    <li><a href="">نمایش آدرس ها</a></li>
+                                    <li><a href="">ایجاد آدرس</a></li>
+                                </ul>
+                            </li>
+                            <div class="remactive text-white">
+                                <i class="fas fa-caret-right"></i>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="tab-pane extrimeside" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <ul class="p-custrasid">
+                            <li>
+                                مدیریت محصولات
+                                <ul class="submenu noheight">
+                                    <li><a href="">نمایش محصولات</a></li>
+                                    <li><a href="">ایجاد محصول جدید</a></li>
+
+                                </ul>
+                            </li>
+                            <div class="remactive text-white">
+                                <i class="fas fa-caret-right"></i>
+                            </div>
+                        </ul>
+                        <ul class="p-custrasid">
+                            <li>
+                                مدیریت صنف
+                                <ul class="submenu noheight">
+                                    <li><a href="">نمایش اصناف</a></li>
+                                    <li><a href="">ایجاد صنف</a></li>
+
+                                </ul>
+                            </li>
+                            <div class="remactive text-white">
+                                <i class="fas fa-caret-right"></i>
+                            </div>
+                        </ul>
+                        <ul class="p-custrasid">
+                            <li>
+                                منو ساز رستوران
+                                <ul class="submenu noheight">
+                                    <li><a href="">نمایش منو ها</a></li>
+                                    <li><a href="">ایجاد منو</a></li>
+                                    <li><a href="">نمایش (غذا، دسر، نوشیدنی) منو</a></li>
+                                    <li><a href="">ایجاد (غذا، دسر، نوشیدنی)</a></li>
+                                </ul>
+                            </li>
+                            <div class="remactive text-white">
+                                <i class="fas fa-caret-right"></i>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/mdb.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="assets/js/datatables.min.js"></script>
+    <script src="assets/js/pdfmake.min.js"></script>
+    <script src="assets/js/vfs_fonts.js"></script>
+    <script src="assets/js/datatabledet.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

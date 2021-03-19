@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fa-IR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/mdb.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/datatables.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <title>داشبرد کاربران کالابرگ</title>
+</head>
+
+<body id="userdash">
+    <header>
+
+    </header>
+    <div class="container-fluid ltr">
+
+        <div class="row">
+            <main class="col-9 col-lg-9 border border-white">
+                <h1 class="p-3">
+                    همه کالابرگها (موجود، فروخته شده، باطل شده و ...)
+                </h1>
+                <form action="" methode="POST" enctype="multipart/form-data">
+                    <div class="md-form rtl">
+                        <select class="browser-default custom-select select2">
+                            <option selected>فروشنده ای که میخواهید کالابرگهای آن را ببینید انتخاب کنید</option>
+                            <option value="1">نام کاربر اول </option>
+                            <option value="2">نام کاربر دوم</option>
+                            <option value="3">نام کاربر سوم</option>
+                        </select>
+                    </div>
+                    <div class="container rtl">
+                        <div class="row">
+                            <div class="container rtl">
+                                <table id="showMenu" class="display datatable w-100">
+                                    <thead>
+                                        <tr>
+                                            <th class="nosearch">id</th>
+                                            <th>عنوان:</th>
+                                            <th>تعداد کل</th>
+                                            <th>باقیمانده</th>
+                                            <th>فروخته شده</th>
+                                            <th>باطل شده</th>
+                                            <th class="nosearch">مدیریت</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td>سیرک</td>
+                                            <td>300</td>
+                                            <td>3</td>
+                                            <td>290</td>
+                                            <td>7</td>
+                                            <td>
+                                                <div class="d-flex justify-content-center w-100">
+                                                    <a href="edit-adminPanel.html" class="btn btn-warning p-2">ویرایش</a>
+
+                                                    <form action="" methode="POST">
+                                                        <input type="submit" value="حذف" class="btn btn-danger p-2">
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th></th>
+                                            <th>عنوان:</th>
+                                            <th>تعداد کل</th>
+                                            <th>باقیمانده</th>
+                                            <th>فروخته شده</th>
+                                            <th>باطل شده</th>
+                                            <th>مدیریت</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </main>
+            <aside class="colapse rtl">
+                <div class="iconslider">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
+                            <img src="assets/images/img_trans.gif" alt=""
+                            id="dashboard">
+                          </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                            <img src="assets/images/img_trans.gif"
+                            alt="" id="users">
+                          </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
+                            <img src="assets/images/img_trans.gif" alt="" id="product">
+                          </a>
+                        </li>
+                      </ul>
+                     <div class="position-absolute poscloser remactive">
+                        <p>
+                            <i class="fas fa-chevron-circle-right"></i>
+                        </p>                      
+                    </div>
+                </div>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane extrimeside fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <ul class="p-custrasid">
+                            <li>
+                                داشبرد
+
+                                <ul class="submenu noheight">
+                                    <li><a href="index.html">نمایش داشبرد</a></li>
+                                </ul>
+
+                            </li>                            
+                        </ul> 
+                    </div>
+                    <div class="tab-pane extrimeside fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <ul class="p-custrasid">
+                            <li>
+                                کاربر
+
+                                <ul class="submenu noheight">
+                                    <li><a href="show-profile.html">نمایش
+                                            پروفایل</a></li>
+                                    <li><a href="create-profile.html">ایجاد
+                                            پروفایل</a></li>
+                                    <li><a href="create-user.html">ایحاد کاربر</a></li>        
+                                    <li><a href="userlist.html">لیست کاربران</a></li>
+                                    <li><a href="create-address.html">ایجاد آدرس</a></li>
+                                    <li><a href="show-address.html">نمایش آدرس ها</a></li>                                 
+                                </ul>
+                            </li>                   
+                        </ul>     
+                    </div>
+                    <div class="tab-pane extrimeside fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <ul class="p-custrasid">
+                            <li>
+                                مدیریت کالابرگها
+                                <ul class="submenu noheight">
+                                    <li><a href="list-adminPanel.html"> مشاهده همه</a><span class="upnumber">3</span></li>
+                                    <li><a href="create-adminPanel.html">ایجاد کالابرگ </a></li>
+                                    <li><a href="list-exisadminPanel.html"> کالابرگهای موجود</a><span class="upnumber">3</span></li>                              
+                                    <li><a href="list-selladminPanel.html"> فروخته شده </a><span class="upnumber">3</span></li>
+                                </ul>
+                            </li>                    
+                        </ul>
+                        <ul class="p-custrasid">
+                            <li>
+                                منو ساز رستوران
+                                <ul class="submenu noheight">
+                                    <li><a href="show-menu.html">نمایش منو ها</a></li>
+                                    <li><a href="create-menu.html">ایجاد منو</a></li>
+                                    <li><a href="show-food.html">نمایش (غذا، دسر، نوشیدنی) منو</a></li>
+                                    <li><a href="create-food.html">ایجاد (غذا، دسر، نوشیدنی)</a></li>
+                                </ul>
+                            </li>                        
+                        </ul>
+                        <ul class="p-custrasid">
+                            <li>
+                                مدیریت صنف
+                                <ul class="submenu noheight">
+                                    <li><a href="show-asnaf.html">نمایش اصناف</a></li>
+                                    <li><a href="create-asnaf.html">ایجاد صنف</a></li>
+                                </ul>
+                            </li>                     
+                        </ul>   
+                        <ul class="p-custrasid">
+                            <li>
+                                مدیریت آگهی
+                                <ul class="submenu noheight">
+                                    <li><a href="show-asnaf.html">نمایش آگهی</a></li>
+                                    <li><a href="show-asnaf.html">ایجاد آگهی</a></li>                       
+                                </ul>
+                            </li>                     
+                        </ul>         
+                    </div>
+               </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/mdb.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="assets/js/datatables.min.js"></script>
+    <script src="assets/js/pdfmake.min.js"></script>
+    <script src="assets/js/vfs_fonts.js"></script>
+    <script src="assets/js/datatabledet.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

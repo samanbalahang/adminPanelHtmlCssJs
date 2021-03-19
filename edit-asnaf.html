@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fa-IR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/mdb.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css">
+    <title>داشبرد کاربران کالابرگ</title>
+</head>
+
+<body id="userdash">
+    <header>
+
+    </header>
+    <div class="container-fluid ltr">
+
+        <div class="row">
+            <main class="col-9 col-lg-9 border border-white py-5 rtl">
+                <h1 class="pb-3">
+                ویرایش صنف
+                </h1>
+                <form action="" methode="POST" enctype="multipart/form-data">
+                    <div class="md-form mb-5 ">
+                        <input type="text" id="uri" class="form-control">
+                        <label for="username" class="">عنوان انگلیسی</label>
+                    </div>
+                    <div class="md-form mb-5  rtl">
+                        <input type="text" id="name" class="form-control">
+                        <label for="name" class="">عنوان فارسی</label>
+                    </div>
+                    <div class="md-form mb-5  rtl">
+                         <input type="text" id="description" class="form-control">
+                         <label for="description" class="">توضیحات تیتر وار</label>
+                    </div>     
+                 
+                              <p>
+                                    افزودن عکس 
+                                </p>
+                                <p>
+                                    <input type="button" id="loadFileXml" value="بارگذاری عکس"
+                                        onclick="document.getElementById('fileupload').click();" class="btn btn-yellow" />
+                                    <input type="file" style="display:none;" name="indeximg" value="افزودن عکس شاخص"
+                                        accept="image/*" id="fileupload" onchange="handleFiles(this.files)"/>
+                       
+                                </p>
+                                     <div id="preview">
+                                        </div>
+                                 
+                              <div class="m-auto text-center">
+                                    <input type="submit" value="ثبت اطلاعات" class="btn btn-warning">
+                              </div>
+                </form>
+         
+            </main>
+            <aside class="colapse rtl">
+                <div class="iconslider">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                aria-controls="home" aria-selected="true"><img src="assets/images/img_trans.gif" alt=""
+                                    id="dashboard"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                aria-controls="profile" aria-selected="false"> <img src="assets/images/img_trans.gif"
+                                    alt="" id="users"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                                aria-controls="contact" aria-selected="false"><img src="assets/images/img_trans.gif"
+                                    alt="" id="product"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane extrimeside active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <ul class="p-0">
+                            <li>
+                                داشبرد
+
+                                <ul class="submenu noheight">
+                                    <li><a href="">نمایش داشبرد</a></li>
+                                </ul>
+
+                            </li>
+                            <div class="remactive text-white">
+                                <i class="fas fa-caret-right"></i>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="tab-pane extrimeside" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <ul class="p-0">
+                            <li>
+                                کاربر
+
+                                <ul class="submenu noheight">
+                                    <li><a href="">نمایش پروفایل</a></li>
+                                    <li><a href="">ایجاد پروفایل</a></li>
+                                    <li><a href="">نمایش کاربر</a></li>
+                                    <li><a href="">ایجاد کاربر</a></li>
+                                </ul>
+                            </li>
+                            <div class="remactive text-white">
+                                <i class="fas fa-caret-right"></i>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="tab-pane extrimeside" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <ul class="p-0">
+                            <li>
+                                مدیریت محصولات
+                                <ul class="submenu noheight">
+                                    <li><a href="">نمایش محصولات</a></li>
+                                    <li><a href="">ایجاد محصول جدید</a></li>
+
+                                </ul>
+                            </li>
+                            <div class="remactive text-white">
+                                <i class="fas fa-caret-right"></i>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/mdb.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script type="text/javascript">
+        var preview =  document.getElementById("preview");
+            function handleFiles(files) {
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
+
+                    if (!file.type.startsWith('image/')) {
+                        continue
+                    }
+
+                    const img = document.createElement("img");
+                    const del = document.createElement("a");
+                    del.classList.add("btn","remove","btn","btn-danger");
+                    icon = document.createElement("i");
+                    icon.classList.add("fas","fa-times");
+                    del.appendChild(icon);
+                    preview.appendChild(del);
+                    img.classList.add("w-80");
+                    img.file = file;
+                    preview.appendChild(img);          
+                    const reader = new FileReader();
+                    reader.onload = (function (aImg) {
+                        return function (e) {
+                            aImg.src = e.target.result;
+                        };
+                    })(img);
+                    reader.readAsDataURL(file);
+                }
+            }
+    
+
+        </script>
+        <script>
+            $(document).ready(function(){
+                $("#preview").click(function(){
+                    alert('عکس حذف شود');
+                    $("#preview").children().remove();
+                    $('#fileupload').val("");
+                });
+            });
+        </script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
+       
+</body>
+
+</html>
